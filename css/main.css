@@ -4,6 +4,10 @@
 	padding: 0px;
 }
 
+body {
+	overflow-x: hidden;
+}
+
 nav {
 	width: 100%;
 	padding: 0;
@@ -55,7 +59,7 @@ nav ul.right {
 	padding-left: 1000px;
 	list-style-type: none;
 }
-nav .fa-right {
+.icon-stack {
 	color: #fff;
 	float: right;
 }
@@ -70,8 +74,7 @@ nav .fa-right {
 }
 .header h3 {
 	position: relative;
-	float: center;
-	margin-top: 75px;
+	top: 175px;
 	margin: 0 auto;
 	width: 30%;
 	background-color: rgba(0, 0, 0, .5);
@@ -84,6 +87,7 @@ nav .fa-right {
 
 .stats {
 	position: relative;
+	text-align: center;
 	margin-top: 350px;
 	width: 100%;
 	height: 190px;
@@ -92,7 +96,6 @@ nav .fa-right {
 }
 .fun {
 	display: inline-block;
-	float: center;
 	height: 75%;
 	width: 75%;
 	padding: 18px 5px;
@@ -148,6 +151,9 @@ nav .fa-right {
 	padding: 35px;
 }
 
+.lower {
+	text-align: center;
+}
 .lower .fa {
 	margin: 0 auto;
 	padding: 30px;
@@ -161,13 +167,45 @@ nav .fa-right {
 .footer {
 	width: 100%;
 	background-color: #000;
-	height: 100px;
+	height: 50px;
+	text-align: center;
 }
 
 .footer h2 {
 	color: #fff;
-	margin: 0 auto;
 	font-size: 18px;
 	text-transform: uppercase;
 	font-family: sans-serif, Verdana;
+}
+
+/**media queries**/
+@media screen (min-width: 1425px) {
+	.stats, .fun {
+		display: inline;
+		height: 35%;
+		width: 35%;
+		padding: 18px 5px;
+	}
+}
+
+@media screen (min-width: 770px) {
+	.clients, .awards, .coffee, .pizza, .team {
+		display: inline-block;
+		border: 1px solid #fff;
+		text-align: center;
+		padding: 25px;
+	}
+	.stats h3 {
+		font-size: 30px
+	}
+
+}
+
+@media screen (min-width: 400px) {
+		.stats {
+			height: 50px;
+		}
+		.clients {
+			display: none;
+		}
 }
